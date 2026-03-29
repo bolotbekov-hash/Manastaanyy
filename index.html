@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Манас Ааламы — Путь Баатыра</title>
+    <title>Манас Ааламы — Энциклопедиялык Саякат</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,48 +12,41 @@
 </head>
 <body>
 
-<div class="journey-map">
-    <div class="map-point active" id="p0">1 <span class="map-label">Балалык</span></div>
-    <div class="map-point" id="p1">2 <span class="map-label">Биримдик</span></div>
-    <div class="map-point" id="p2">3 <span class="map-label">Чоң Казат</span></div>
-    <div class="map-point" id="p3">4 <span class="map-label">Насаат</span></div>
-</div>
+    <div class="journey-map">
+        <div class="map-point active" id="p0">I <span class="map-label">Балалык</span></div>
+        <div class="map-point" id="p1">II <span class="map-label">Биримдик</span></div>
+        <div class="map-point" id="p2">III <span class="map-label">Казат</span></div>
+        <div class="map-point" id="p3">IV <span class="map-label">Керээз</span></div>
+    </div>
 
-<div class="stats-bar">
-    <div class="hearts" id="hearts-display">❤️❤️❤️❤️❤️</div>
-    <div class="score-text">Упай: <span id="current-score">0</span></div>
-</div>
+    <div class="quiz-card">
+        <div id="quiz-screen">
+            <div class="phase-indicator" id="phase-name">Бөлүм жүктөлүүдө...</div>
+            <div class="question-counter" id="q-counter">Суроо 1/10</div>
+            <div class="question-text" id="q-text">...</div>
+            
+            <div class="options-grid" id="options"></div>
 
-<div class="quiz-card" id="main-card">
-    <div id="quiz-screen">
-        <div class="phase-indicator" id="phase-name"></div>
-        <div class="question-counter" id="q-counter"></div>
-        <div class="question-text" id="q-text"></div>
-        <div class="options-grid" id="options"></div>
+            <div id="fact-box">
+                <h4><i class="fas fa-scroll"></i> Тарыхый маалымкат</h4>
+                <div id="fact-text"></div>
+            </div>
 
-        <div id="fact-box">
-            <h4><i class="fas fa-scroll"></i> Тарыхый барактардан</h4>
-            <p id="fact-text"></p>
+            <button id="next-btn">Кийинки кадам <i class="fas fa-arrow-right"></i></button>
         </div>
 
-        <button id="next-btn">Кийинки кадам <i class="fas fa-arrow-right"></i></button>
+        <div class="result-screen" id="result-screen">
+            <h1 style="font-family:'Playfair Display'; color:var(--primary-red)">Сиздин натыйжаңыз</h1>
+            <div class="score-circle">
+                <div class="score-val" id="final-score">0</div>
+                <div style="font-size:0.8rem">40тан упай</div>
+            </div>
+            <h2 id="rank-name" style="color:var(--gold)"></h2>
+            <p id="rank-desc" style="max-width:550px; margin: 20px auto; line-height:1.7; font-size: 1.1rem; color: #444;"></p>
+            <button onclick="location.reload()" style="background:var(--dark); color:white; border:none; padding:15px 40px; border-radius:30px; cursor:pointer; margin-top:25px; font-weight: bold;">Кайрадан баштоо</button>
+        </div>
     </div>
 
-    <div class="result-screen" id="result-screen">
-        <h1>Сапар аяктады!</h1>
-        <p>Сиздин жалпы упайыңыз: <span id="final-score"></span></p>
-        <div class="rank-badge" id="rank-name"></div>
-        <p id="rank-desc"></p>
-        <button class="restart-btn1" onclick="location.reload()">Жаңыдан баштоо</button>
-    </div>
-
-    <div class="game-over-screen" id="game-over-screen">
-        <h1>Сапар үзгүлтүккө учурады</h1>
-        <p>Сиз бардык мүмкүнчүлүктөрүңүздү колдондуңуз.</p>
-        <button class="restart-btn" onclick="location.reload()">Кайра аракет кылуу</button>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
